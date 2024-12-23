@@ -10,15 +10,23 @@ public class Main {
 class App{
     public void run(){
         Scanner sc = new Scanner(System.in);
-
         System.out.println("==명언 앱==");
 
-        System.out.print("명언 : ");
-        sc.nextLine();
-        System.out.print("작가 : ");
-        sc.nextLine();
-        System.out.println("명령) 종료");
+        while(true){
+            System.out.print("명령) ");
+            String command = sc.nextLine();
+            if(command.equals("종료")){
+                System.out.println(("명언 앱을 종료합니다"));
+                break;
+            }
+            else if(command.equals("등록")){
+                System.out.print("명언 : ");
+                sc.nextLine();
 
-        sc.close();
+                System.out.print("작가 : ");
+                sc.nextLine();
+            }
+
+        }
     }
 }
