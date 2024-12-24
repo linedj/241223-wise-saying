@@ -29,9 +29,9 @@ class App{
                 Quote Quote = new Quote(idCounter, quote, author); // 새 명언 객체 생성
 
                 saveQuote(Quote); // 명언을 파일에 저장
-                saveLastId(idCounter + 1); // ID 증가 후 저장
+                saveLastId(++idCounter); // ID 증가 후 저장
 
-                System.out.println(idCounter + "번 명언이 등록되었습니다.");
+                System.out.println("%d번 명언이 등록되었습니다.".formatted(idCounter));
 
                 // 명언 목록 출력
             } else if (command.equals("목록")) {
